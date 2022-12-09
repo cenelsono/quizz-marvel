@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c5a936ea-4a04-4737-a254-e710b753676b" name="Changes" comment="project">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/ErrorPage/ErrorPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/ForgetPassword/ForgetPassword.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/Home/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/Login/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/SignUp/SignUp.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Container/Welcome/Welcome.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Context/AuthContextProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/firebaseConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Firebase/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Levels/Levels.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Logout/Logout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ProgressBar/ProgressBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Quizz/Quizz.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useLocalStorage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/batman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/bg-noise-texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/deadpool.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/griffes-droit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/griffes-gauche.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/ironman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/spiderman.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/wolverine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/images/xmen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ressources/questions.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Iag4iLPZL4IkKhjJ5pKJ2YtGHE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nelson.o/Developpement/Formations/React/React JS pour tous/marvel-quiz-code-source&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nelson.o\Developpement\Formations\React\React JS pour tous\quizz-marvel\src\components" />
+      <recent name="C:\Users\nelson.o\Developpement\Formations\React\React JS pour tous\quizz-marvel\src\Container\Quizz" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/App/App.js" working-dir="$PROJECT_DIR$/src/components/App">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.App.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5a936ea-4a04-4737-a254-e710b753676b" name="Changes" comment="" />
+      <created>1670424920434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670424920434</updated>
+      <workItem from="1670424923661" duration="10648000" />
+      <workItem from="1670488872414" duration="15765000" />
+      <workItem from="1670516519321" duration="3481000" />
+      <workItem from="1670574191373" duration="5074000" />
+    </task>
+    <task id="LOCAL-00001" summary="project">
+      <created>1670580724379</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670580724379</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project" />
+    <option name="LAST_COMMIT_MESSAGE" value="project" />
+  </component>
+</project>
