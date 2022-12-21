@@ -3,7 +3,7 @@ export const QuizMarvel = [
         fournisseur: "Donkey Geek (https://www.youtube.com/c/DonkeyGeek)",
         sujet: "Application Marvel Quiz pour apprentissage React JS",
         quizz: {
-            debutant: [
+            'débutant': [
                 {
                     id: 0,
                     question: "De quelle équipe fait partie Iceman?",
@@ -125,7 +125,7 @@ export const QuizMarvel = [
                     heroId: 1009662
                 }
             ],
-            "confirme": [
+            "confirmé": [
                 {
                     id: 0,
                     question: "Qui est Logan dans la bande dessinée de Marvel Comics 'X-Men' ?",

@@ -1,36 +1,51 @@
-import React, {createContext, useMemo, useState} from 'react';
+import React, {createContext, useMemo, useState, useEffect} from 'react';
 import {auth} from '../Firebase/firebaseConfig.js';
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import {useNavigate} from "react-router-dom";
+import {onAuthStateChanged, signInWithEmailAndPassword, signOut} from "firebase/auth";
+import {getDoc} from "firebase/firestore";
+import { user} from "../Firebase/users";
 
 //initialisation du context
 export const AuthContext = createContext();
 
-//creation du composant avec le state que je veux partager dans l'appli
 export const AuthContextProvider = props => {
-
-    const [token, setToken] = useLocalStorage('token', null);
+    const [ userSession, setUserSession ] = useLocalStorage('userSession', null);
     const navigate = useNavigate();
 
-    // call this function when you want to authenticate the user
-    const login = async (data) => {
-        setToken(data);
-        navigate("/welcome");
+    useEffect(() => {
+        const listener = onAuthStateChanged(auth, (user)=>{
+            user ? setUserSession(user) : navigate('/');
+        });
+        return listener();
+    }, [userSession]);
+
+    const login = async (email, password) => {
+        await signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential)=>{
+                setUserSession(userCredential)
+            });
     };
 
-    // call this function to sign out logged in user
     const logout = () => {
-        setToken(null);
-        navigate("/", { replace: true });
+        signOut(auth).then(() => {
+            setTimeout(()=>{
+                setUserSession(null);
+                navigate("/", { replace: true });
+            }, 1000)
+        }).catch((error) => {
+            console.log(error)
+        });
     };
 
     const value = useMemo(
         () => ({
-            user: token,
+            userSession: userSession,
+            // userData: userData,
             login,
             logout
         }),
-        [token]
+        [userSession]
     );
 
 return (
@@ -42,3 +57,4 @@ return (
 }
 
 export default AuthContext;
+

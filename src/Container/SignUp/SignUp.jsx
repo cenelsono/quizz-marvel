@@ -29,25 +29,9 @@ const SignUp = () => {
     const handleSubmit = (e)=>{
         e.preventDefault();
         setError('');
-        // createUserWithEmailAndPassword(auth, email, password)
-        //     .then((authUser)=>{
-        //         return setDoc(user(authUser.user.uid), {
-        //             pseudo: pseudo,
-        //             email: email
-        //         })
-        //     })
-        //     .then(()=>{
-        //         //je vide l'objet
-        //         setLoginData({...data});
-        //         navigate('/welcome');
-        //     }).catch((error)=> {
-        //         setError(error);
-        //         setLoginData({...data});
-        // })
-
         createUserWithEmailAndPassword(auth, email, password)
             .then((authUser)=>{
-                return setDoc(doc(user(authUser.user.uid), 'pseudo'), {
+                return setDoc(user(authUser.user.uid), {
                     pseudo: pseudo,
                     email: email
                 })
@@ -57,9 +41,10 @@ const SignUp = () => {
                 setLoginData({...data});
                 navigate('/welcome');
             }).catch((error)=> {
-            setError(error);
-            setLoginData({...data});
+                setError(error);
+                setLoginData({...data});
         })
+
     }
 
 

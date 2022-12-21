@@ -1,56 +1,34 @@
 import React, {useContext, useEffect, useState} from 'react';
 import Logout from "../../components/Logout/Logout";
 import Quizz from "../../components/Quizz/Quizz";
-import {useNavigate} from "react-router-dom";
-import { onAuthStateChanged } from 'firebase/auth';
-import {getUserData, user} from "../../Firebase/users";
-import {auth, db} from "../../Firebase/firebaseConfig";
-import {doc, getDoc} from 'firebase/firestore';
-
+import {user} from "../../Firebase/users";
+import {getDoc} from 'firebase/firestore';
+import Loader from "../../components/Loader/Loader";
+import AuthContext from "../../Context/AuthContextProvider";
 
 const Welcome = () => {
-    //TODO: déporter cette logique dans App.js et AuthContext pour protéger mes routes
-    const [ userSession, setUserSession ] = useState(null);
-    const [ userData, setUserData ] = useState({});
-
-    const navigate = useNavigate();
+    const [userData, setUserData] = useState({});
+    const {value: {userSession}} = useContext(AuthContext);
 
     useEffect(() => {
-        const listener = onAuthStateChanged(auth, (user)=>{
-            user ? setUserSession(user) : navigate('/');
-        });
-
-        console.log('userSession', userSession);
-
-        if(userSession){
-            const collectionRef = user(userSession.uid);
-            console.log('collectionRef', collectionRef)
+        if (userSession?.uid) {
+            const collectionRef = user(userSession?.uid);
             getDoc(collectionRef)
-                .then((snapshot)=>{
-                    console.log('snapshot', snapshot);
-                    const exist = snapshot.exists();
-                        if(snapshot.exists()){
-
-                        console.log(snapshot.exists())
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
                         const docData = snapshot.data();
                         setUserData(docData);
                     }
                 })
-                .catch((error)=>{
+                .catch((error) => {
                     console.log(error)
                 })
         }
-
-        return listener();
     }, [userSession]);
 
 
     return userSession === null ? (
-        <>
-            <div className="loader"></div>
-            <p className='loaderText'>Loading...</p>
-
-        </>
+        <Loader text="Authentification..." style={{textAlign: 'center', color: '#fff'}}/>
     ) : (
         <div className='quizz-bg'>
             <div className="container">
