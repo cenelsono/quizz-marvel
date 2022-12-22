@@ -69,7 +69,7 @@ const Quizz = ({userData}) => {
     }
 
     const saveResultsInDb = (levelName, score) => {
-        //TODO: vérifier si la donnée n'existe pas déjà en DB? update : set
+        //TODO: si je recommence le test au niveau débutant, efface tout en DB puis sauvegarde mon nouveau score
 
         if (levelName === 'débutant') {
             setDoc(scores(userSession.uid), {score: [{name: levelName, score: score}]})
