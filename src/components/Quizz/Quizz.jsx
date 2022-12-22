@@ -7,8 +7,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import QuizzOver from "../QuizzOver/QuizzOver";
 import {FaChevronRight} from "react-icons/fa";
 import AuthContext from "../../Context/AuthContextProvider";
-import {arrayUnion, getDoc, setDoc, updateDoc} from "firebase/firestore";
+import {arrayUnion, getDoc, setDoc, updateDoc, deleteField} from "firebase/firestore";
 import {scores} from "../../Firebase/users";
+import {useNavigate} from "react-router-dom";
 
 
 const Quizz = ({userData}) => {
@@ -28,6 +29,7 @@ const Quizz = ({userData}) => {
 
     const maxQuestions = 10;
     const levelNames = ['débutant', 'confirmé', 'expert'];
+    const navigate = useNavigate();
 
     const {value: {userSession}} = useContext(AuthContext);
 
@@ -58,21 +60,19 @@ const Quizz = ({userData}) => {
         saveResultsInDb(levelName, score);
 
         if (isQuizzFinished) {
-            //A VENIR
-            // redirection vers la page des résultats
-
-            //TEMPORAIRE
-            loadNextLevelQuestions(0);
+            setTimeout(() => {
+                navigate('/scores');
+            }, 1500)
         } else {
             loadNextLevelQuestions(quizzLevel)
         }
-
     }
 
     const saveResultsInDb = (levelName, score) => {
         //TODO: vérifier si la donnée n'existe pas déjà en DB? update : set
+
         if (levelName === 'débutant') {
-            setDoc(scores(userSession.uid), {score: [{name: levelName, score: score}]})
+            setDoc(scores(userSession.uid), {score: {name: levelName, score: score}})
                 .then(() => {
                     console.log('score sauvegardé')
                 })
@@ -80,7 +80,8 @@ const Quizz = ({userData}) => {
                     console.log(error)
                 });
         } else {
-            updateDoc(scores(userSession.uid), {score: arrayUnion({name: levelName, score: score})})
+            // updateDoc(scores(userSession.uid), ({score: {name: levelName, score: score}}))
+            updateDoc(scores(userSession.uid), arrayUnion({name: levelName, score: score}))
                 .then(() => {
                     console.log('score sauvegardé')
                 })
