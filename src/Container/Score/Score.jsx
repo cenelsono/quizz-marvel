@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from 'react';
 import AuthContext from "../../Context/AuthContextProvider";
 import {scores} from "../../Firebase/users";
 import {getDoc} from "firebase/firestore";
-import {GiTrophyCup} from "react-icons/gi";
 import Loader from "../../components/Loader/Loader";
 import Logout from "../../components/Logout/Logout";
 import {useNavigate} from "react-router-dom";
@@ -19,7 +18,6 @@ const Score = () => {
         if (scoreRef) {
             getDoc(scoreRef)
                 .then((snapshot) => {
-                    console.log(snapshot)
                     if (snapshot.exists()) {
                         const scoreData = snapshot.data();
                         if (scoreData.score) {

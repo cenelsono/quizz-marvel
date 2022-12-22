@@ -72,7 +72,7 @@ const Quizz = ({userData}) => {
         //TODO: vérifier si la donnée n'existe pas déjà en DB? update : set
 
         if (levelName === 'débutant') {
-            setDoc(scores(userSession.uid), {score: {name: levelName, score: score}})
+            setDoc(scores(userSession.uid), {score: [{name: levelName, score: score}]})
                 .then(() => {
                     console.log('score sauvegardé')
                 })
@@ -80,8 +80,7 @@ const Quizz = ({userData}) => {
                     console.log(error)
                 });
         } else {
-            // updateDoc(scores(userSession.uid), ({score: {name: levelName, score: score}}))
-            updateDoc(scores(userSession.uid), arrayUnion({name: levelName, score: score}))
+            updateDoc(scores(userSession.uid), {score: arrayUnion({name: levelName, score: score})})
                 .then(() => {
                     console.log('score sauvegardé')
                 })
