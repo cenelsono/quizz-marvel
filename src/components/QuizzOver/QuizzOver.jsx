@@ -31,8 +31,6 @@ const QuizzOver = ({
     const averageGrade = maxQuestions / 2;
     const hasAverage = score >= averageGrade;
 
-    console.log('RENDER IN QuizzOver')
-
     const hideModal = () => {
         setDisplayModal(false);
         setIsLoading(true);
