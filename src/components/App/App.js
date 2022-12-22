@@ -11,6 +11,7 @@ import {AuthContext, AuthContextProvider} from '../../Context/AuthContextProvide
 import ForgetPassword from "../../Container/ForgetPassword/ForgetPassword";
 import {IconContext} from "react-icons";
 import {useContext} from "react";
+import Score from "../../Container/Score/Score";
 
 const ProtectedRoute = ({redirectPath = '/'}) => {
     const {value: {userSession}} = useContext(AuthContext);
@@ -36,6 +37,7 @@ function App() {
                         <Route path='/welcome' element={<Welcome/>}/>
                         <Route element={<ProtectedRoute/>}>
                             <Route path='/welcome' element={<Welcome/>}/>
+                            <Route path='/scores' element={<Score/>}/>
                         </Route>
                     </Routes>
                     <Footer/>

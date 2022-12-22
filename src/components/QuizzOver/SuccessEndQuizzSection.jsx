@@ -25,7 +25,9 @@ const SuccessEndQuizzSection = ({quizzLevel, levelCount, finishLevel}) => {
                         />
                         Bravo, vous êtes un expert !
                     </p>
-                    <button className='btnResult gameOver' onClick={() => finishLevel(quizzLevel)}>Accueil</button>
+                    <button className='btnResult success' onClick={() => finishLevel(quizzLevel)}>Voir mes scores
+                    </button>
+                    {/*<button className='btnResult gameOver' onClick={() => finishLevel(quizzLevel)}>Accueil</button>*/}
                 </div>
             </>
         );
