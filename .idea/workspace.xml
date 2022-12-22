@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a936ea-4a04-4737-a254-e710b753676b" name="Changes" comment="project">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/SignUp/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/SignUp/SignUp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Container/Welcome/Welcome.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Container/Welcome/Welcome.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Context/AuthContextProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Context/AuthContextProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Firebase/firebaseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firebase/firebaseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Firebase/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Firebase/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Levels/Levels.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Levels/Levels.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logout/Logout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logout/Logout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProgressBar/ProgressBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProgressBar/ProgressBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal/Modal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Quizz/Quizz.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quizz/Quizz.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ressources/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuizzOver/QuizzOver.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuizzOver/QuizzOver.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +20,6 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectId" id="2Iag4iLPZL4IkKhjJ5pKJ2YtGHE" />
   <component name="ProjectLevelVcsManager">
@@ -59,7 +38,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/nelson.o/Developpement/Formations/Typescript/Typescript en partant de zero&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nelson.o/Developpement/Formations/React/quizz-marvel&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -107,6 +86,8 @@
       <workItem from="1671437498558" duration="24607000" />
       <workItem from="1671526811535" duration="13592000" />
       <workItem from="1671610820126" duration="7518000" />
+      <workItem from="1671631158178" duration="4893000" />
+      <workItem from="1671699197379" duration="3908000" />
     </task>
     <task id="LOCAL-00001" summary="project">
       <created>1670580724379</created>
