@@ -1,10 +1,10 @@
 import React, {memo, useEffect, useState} from 'react';
-import {GiTrophyCup} from 'react-icons/gi'
 import Loader from "../Loader/Loader";
 import Modal from "../Modal/Modal";
 import {axioInstance} from "../../ressources/apiConfig";
 import {ImCross} from "react-icons/im";
 import {FaCheck} from "react-icons/fa";
+import ScoreSection from "./ScoreSection";
 
 
 const PUBLIC_KEY = process.env.REACT_APP_MARVEL_API_PUBLIC_KEY;
@@ -30,6 +30,8 @@ const QuizzOver = ({
     const [isLoading, setIsLoading] = useState(true);
     const averageGrade = maxQuestions / 2;
     const hasAverage = score >= averageGrade;
+
+    console.log('RENDER IN QuizzOver')
 
     const hideModal = () => {
         setDisplayModal(false);
@@ -61,14 +63,11 @@ const QuizzOver = ({
                 console.log(error)
             })
         }
-        console.log(characterData.data.results[0])
-
     }
 
     if (!hasAverage) {
-        //TODO: charger le dernier level raté, ne pas tout recommencer
         setTimeout(() => {
-            loadLevelQuestion(0);
+            loadLevelQuestion(quizzLevel);
         }, 3000)
     }
 
@@ -140,62 +139,17 @@ const QuizzOver = ({
         }
     }
 
-
-    const successEndQuizzSection = quizzLevel < levelNames.length ?
-        (
-            <>
-                <div className='stepsBtnContainer'>
-                    <p className='successMsg'>
-                        <GiTrophyCup
-                            size='50px'
-                        />
-                        Bravo, passez au niveau suivant!
-                    </p>
-                    <button className='btnResult success' onClick={() => finishLevel(quizzLevel)}>Niveau suivant
-                        {/*<button className='btnResult success' onClick={() => loadLevelQuestion(quizzLevel)}>Niveau suivant*/}
-                    </button>
-                </div>
-            </>
-        ) : (
-            <>
-                <div className='stepsBtnContainer'>
-                    <p className='successMsg'>
-                        <GiTrophyCup
-                            size='50px'
-                        />
-                        Bravo, vous êtes un expert !
-                    </p>
-                    <button className='btnResult gameOver' onClick={() => finishLevel(quizzLevel)}>Accueil</button>
-                    {/*<button className='btnResult gameOver' onClick={() => loadLevelQuestion(0)}>Accueil</button>*/}
-                </div>
-            </>
-        );
-
-
-    const scoreSection = hasAverage ? (
-        <>
-            {successEndQuizzSection}
-            <div className='percentage'>
-                <div className='progressPercent'>Réussite: {percent}%</div>
-                <div className='progressPercent'>Note: {score}/{maxQuestions}</div>
-            </div>
-            <hr/>
-        </>
-    ) : (
-        <>
-            <div className='stepsBtnContainer'>
-                <p className='failureMsg'>Vous avez échoué!</p>
-            </div>
-            <div className='percentage'>
-                <div className='progressPercent'>Réussite: {percent}%</div>
-                <div className='progressPercent'>Note: {score}/{maxQuestions}</div>
-            </div>
-        </>
-    );
-
     return (
         <>
-            {scoreSection}
+            <ScoreSection
+                score={score}
+                maxQuestions={maxQuestions}
+                quizzLevel={quizzLevel}
+                finishLevel={finishLevel}
+                levelCount={levelNames.length}
+                hasAverage={hasAverage}
+                percent={percent}
+            />
             <p>Les réponses aux questions posées:</p>
             <div className='answerContainer'>
                 <table className='answers'>
@@ -242,4 +196,5 @@ const QuizzOver = ({
     );
 };
 
+// export default QuizzOver;
 export default memo(QuizzOver);

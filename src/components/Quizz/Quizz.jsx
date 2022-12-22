@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import QuizzOver from "../QuizzOver/QuizzOver";
 import {FaChevronRight} from "react-icons/fa";
 import AuthContext from "../../Context/AuthContextProvider";
-import {arrayUnion, setDoc, updateDoc} from "firebase/firestore";
+import {arrayUnion, getDoc, setDoc, updateDoc} from "firebase/firestore";
 import {scores} from "../../Firebase/users";
 
 
@@ -220,7 +220,7 @@ const Quizz = ({userData}) => {
                     maxQuestions={maxQuestions}
                     quizzLevel={quizzLevel}
                     percent={percent}
-                    // loadLevelQuestion={loadNextLevelQuestions}
+                    loadLevelQuestion={loadNextLevelQuestions}
                     finishLevel={goToNextLevel}
                     userAnswers={userAnswersArray}
                 />
